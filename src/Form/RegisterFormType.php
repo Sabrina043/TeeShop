@@ -30,13 +30,19 @@ class RegisterFormType extends AbstractType
                 'label'=> 'Prénom'
             ])
             ->add('gender', ChoiceType::class, [
-                'label'=>'Civilité',
-                'choices'=> [
-                    'Homme'=>'homme',
-                    'Femme'=>'femme',
-                    'Non-binaire'=>'non-binaire'
+                'label' => 'Civilité',
+                'choices' => [
+                    'Homme' => 'homme',
+                    'Femme' => 'femme',
+                    'Apache' => 'apache'
                 ],
-                'expanded'=>true,
+                'expanded' => true,
+                'label_attr' => [
+                    'class' => 'radio-inline'
+                ],
+                'choice_attr' => [
+                    'class' => 'radio-inline'
+                ]
             ])
 
             ->add('submit', SubmitType::class, [
