@@ -28,7 +28,7 @@ class UserController extends AbstractController
             ->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            #on set les propièter qui ne sont pas dans le formulaire ET obligatoire dans la BDD
+            #on set les proprièter qui ne sont pas dans le formulaire ET obligatoire dans la BDD
             $user->setCreatedAt(new DateTime());
             $user->setUpdatedAt(new DateTime());
 
